@@ -20,7 +20,7 @@ array_of_sides = []
 end
 
 pifagor_array = array_of_sides.sort.collect { |element| element**2 }
-array_size = array_of_sides.group_by { |i| i }.size
+array_size = array_of_sides.uniq.size
 
 puts 'Треугольник прямоугольный.' if (pifagor_array[0] + pifagor_array[1]) == pifagor_array[2]
 puts 'Треугольник равнобедренный.' if array_size == 2
