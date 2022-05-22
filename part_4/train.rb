@@ -23,11 +23,11 @@ class Train
   end
 
   def add_wagons
-    @amount_wagons += 1 if @speed.nil?
+    @amount_wagons += 1 if @speed.zero?
   end
 
   def delete_wagons
-    @amount_wagons -= 1 if @speed.nil?
+    @amount_wagons -= 1 if @speed.zero?
   end
 
   def add_route(route)
