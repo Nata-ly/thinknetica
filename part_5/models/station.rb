@@ -32,9 +32,7 @@ class Station
   end
 
   def self.print_station_list
-    print 'Станции: '
     @@station_list.each { |station| print "#{station.name} " }
-    puts "\n"
   end
 
   def self.station_list

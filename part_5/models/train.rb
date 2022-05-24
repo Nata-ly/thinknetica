@@ -47,23 +47,23 @@ class Train
 
   def move_next_station
     if @route && last_station?
-      puts 'Последняя станция, движение вперед невозможно'
+      'Последняя станция, движение вперед невозможно'
     elsif @route
       update_sration(1)
-      puts "Поезд едит вперед, текущая станция - #{station.name}"
+      "Поезд едит вперед, текущая станция - #{station.name}"
     else
-      puts 'Не задан маршрут'
+      'Не задан маршрут'
     end
   end
 
   def move_past_station
     if @route && first_station?
-      puts 'Первая станция, движение назад невозможно'
+      'Первая станция, движение назад невозможно'
     elsif @route
       update_sration(-1)
-      puts "Поезд едит назад, текущая станция - #{station.name}"
+      "Поезд едит назад, текущая станция - #{station.name}"
     else
-      puts 'Не задан маршрут'
+      'Не задан маршрут'
     end
   end
 
