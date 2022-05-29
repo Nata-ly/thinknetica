@@ -93,7 +93,8 @@ class Train
   protected
 
   def validate!
-    raise 'Номер не может быть пустым' if @number.nil? || @number.length.zero?
+    raise 'Номер должен быть строкой' unless @number.class == String
+    raise 'Номер не может быть пустым' if @number.length.zero?
     raise 'Номер поезда в недопустимом формате' if @number !~ TRAIN_NUMBER_FORMAT
   end
 

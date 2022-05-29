@@ -118,8 +118,9 @@ class TextInterface
       puts 'Введите название:'
       type.new(gets.chomp)
       puts 'Поезд добавлен'
-    rescue => e
-      puts "Поезд не был добавлен. #{e.message}"
+    rescue StandardError => e
+      puts "Поезд не был добавлен. #{e.message}."
+      puts "Осталось попыток - #{ATTEMPTS_ADD_TRAIN - attempts}" if attempts <= ATTEMPTS_ADD_TRAIN
       retry if attempts <= ATTEMPTS_ADD_TRAIN
     end
   end
