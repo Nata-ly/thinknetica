@@ -2,8 +2,6 @@
 
 # Preload data.
 module Seed
-  private
-
   def seed
     train1 = CargoTrain.new('train1')
     train2 = CargoTrain.new('train2')

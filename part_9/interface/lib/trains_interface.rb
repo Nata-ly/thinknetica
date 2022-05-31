@@ -2,17 +2,15 @@
 
 # Module that implements work with the trains menu section.
 module TrainsInterface
-  private
-
   FORMATERS_TRAINS = {
-    1 => ->(context) { context.send(:show_trains) },
-    2 => ->(context) { context.send(:add_route_to_train) },
-    3 => ->(context) { context.send(:add_wagon_to_train) },
-    4 => ->(context) { context.send(:delete_wagons_from_train) },
-    5 => ->(context) { context.send(:train_move_next) },
-    6 => ->(context) { context.send(:train_move_past) },
-    7 => ->(context) { context.send(:add_train) },
-    8 => ->(context) { context.send(:show_train_wagons) }
+    1 => ->(context) { context.show_trains },
+    2 => ->(context) { context.add_route_to_train },
+    3 => ->(context) { context.add_wagon_to_train },
+    4 => ->(context) { context.delete_wagons_from_train },
+    5 => ->(context) { context.train_move_next },
+    6 => ->(context) { context.train_move_past },
+    7 => ->(context) { context.add_train },
+    8 => ->(context) { context.show_train_wagons }
   }.freeze
 
   def work_with_trains

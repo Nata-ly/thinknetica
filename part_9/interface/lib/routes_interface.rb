@@ -2,13 +2,11 @@
 
 # Module that implements work with the routes menu section.
 module RoutesInterface
-  private
-
   FORMATERS_ROUTES = {
-    1 => ->(context) { context.send(:add_route) },
-    2 => ->(context) { context.send(:add_station_to_route) },
-    3 => ->(context) { context.send(:delete_station_from_route) },
-    4 => ->(context) { context.send(:show_route_stations) }
+    1 => ->(context) { context.add_route },
+    2 => ->(context) { context.add_station_to_route },
+    3 => ->(context) { context.delete_station_from_route },
+    4 => ->(context) { context.show_route_stations }
   }.freeze
 
   def work_with_routes

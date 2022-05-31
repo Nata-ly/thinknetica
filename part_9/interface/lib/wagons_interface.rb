@@ -2,11 +2,9 @@
 
 # Module that implements work with the wagons menu section.
 module WagonsInterface
-  private
-
   FORMATERS_WAGONS = {
-    1 => ->(context) { context.send(:add_wagon) },
-    2 => ->(context) { context.send(:take_seat_wagon) }
+    1 => ->(context) { context.add_wagon },
+    2 => ->(context) { context.take_seat_wagon }
   }.freeze
 
   def work_with_wagons

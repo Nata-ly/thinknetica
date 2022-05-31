@@ -23,11 +23,11 @@ class TextInterface
   }.freeze
 
   FORMATERS = {
-    1 => ->(context) { context.send(:work_with_stations) },
-    2 => ->(context) { context.send(:work_with_trains) },
-    3 => ->(context) { context.send(:work_with_routes) },
-    4 => ->(context) { context.send(:work_with_wagons) },
-    5 => ->(context) { context.send(:seed) }
+    1 => ->(context) { context.work_with_stations },
+    2 => ->(context) { context.work_with_trains },
+    3 => ->(context) { context.work_with_routes },
+    4 => ->(context) { context.work_with_wagons },
+    5 => ->(context) { context.seed }
   }.freeze
 
   def call

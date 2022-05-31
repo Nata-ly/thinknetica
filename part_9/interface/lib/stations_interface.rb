@@ -2,12 +2,10 @@
 
 # Module that implements work with the station menu section.
 module StationsInterface
-  private
-
   FORMATERS_STATIONS = {
-    1 => ->(context) { context.send(:print_stations) },
-    2 => ->(context) { context.send(:print_trains_to_stations) },
-    3 => ->(context) { context.send(:add_new_station) }
+    1 => ->(context) { context.print_stations },
+    2 => ->(context) { context.print_trains_to_stations },
+    3 => ->(context) { context.add_new_station }
   }.freeze
 
   def work_with_stations

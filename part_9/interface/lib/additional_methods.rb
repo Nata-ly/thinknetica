@@ -2,8 +2,6 @@
 
 # It contains common methods for modules.
 module AdditionalMethods
-  private
-
   def choose_train
     type = choose_type(TextInterface::TRAIN_TYPE)
     puts 'Выберите поезд'
